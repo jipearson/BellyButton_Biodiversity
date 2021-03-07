@@ -1,0 +1,66 @@
+  .jumbotron {
+    background-image: url("bacteria.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
+
+  .jumbotron h1{
+    color:aliceblue;
+    text-decoration-color: black;
+  }
+
+  .jumbotron h1{
+    /* height: inherit;
+    background: inherit;
+    -webkit-background-clip: text;
+            background-clip: text; */
+    color: aliceblue;
+    font: 180 7vmin/10vh cookie, cursive;
+    text-align: center;
+    /* filter: invert(1) grayscale(1) contrast(9); */
+  }
+
+  .jumbotron p{
+    color: white;
+    mix-blend-mode: difference;    
+  }
+
+  body {
+    background-image: linear-gradient(to right,aliceblue , rgb(197, 214, 230));
+    color:black;
+    font-family:Arial;
+    font-size: 15px;
+}
+
+li{
+    list-style-type: none;
+    margin: 0 1vw;
+    font-size: 2vh;
+}
+  
+a{
+    text-decoration: none;
+    /*below I changed the color*/
+     color: black;
+    /*I added some padding*/
+    padding: 2vw;
+     /*also changed the font family but that's totally irrelevant*/
+    font-family: monospace;    
+}  
+nav{
+    width: 100vw;
+}  
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+body{
+    margin: 0;
+}  
+
+a:hover{
+    background-color: #C6E9FF;
+  }

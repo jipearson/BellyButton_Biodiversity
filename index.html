@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!--link to our stylesheet-->  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav>
+          <ul>
+            <li> 
+              <!-- link one -->
+              <a href="#gauge">Wash Frequency</a>
+            </li>
+            <li>
+              <!-- link two -->
+              <a href="#bar">Top 10 Bacteria</a>
+            </li>
+            <li>
+              <!-- link three -->
+              <a href="#bubble">Bacteria Cultures Per Sample</a>
+            </li>
+          </ul>  
+      </nav>
+    <!-- jumbotron -->
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <p>
+          Many bacterial species are not well studied and many more remain unknown to science. 
+          Our role is to discover  and document these bacteria. In particular we are interested in 
+          bacterial species that have ability to synthesize proteins that taste like beef. 
+          Our lab has partnered with Improbable Beef, a food startup to research candidate species.
+          <br><br> Labs across the country  have had success in synthesizing meat from algae, fungi, 
+          and microorganisms found on plant roots. However, Improbable Beef is still searching for
+          the bacteria that will provide the perfect taste. We have a hypothesis that there's a 
+          bacteria found on the human body. <br><br> The human body is a source of thousands of types 
+          of bacteria, and different parts of the body harbor different species. Bacterial species may 
+          vary even in the same location. We hypothesize that the ideal bacteria species to make synthetic  
+          beef, may be found in someone's belly button. To test our hypothesis we have sampled the 
+          navels of people across the county to identify bacterial species that colonize our belly buttons. 
+          Each persons identity is anonymous and has been assigned and ID number. <br><br> Participants, 
+          researchers, scientists, and navel enthusiasts alike will be able to visit this dashboard to
+          learn more about the different bacterial species that live in our navels... Who knows what we 
+          might find. <br><br>
+        </p>
+      </div>      
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="bar"></div>
+        <h5>The bar chart above shows the top 10 bacterial species (OTUs) found in our participant's belly button.</h5>
+      </div>
+      <div class="col-md-6">
+        <div id="gauge"></div>
+        <h5>The gauge chart above shows the number of times our participant wases their belly button each week.</h5>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <h5>The bubble chart above shows a bubble for each species found. The size of each bubble correlates to the amount found; the larger the bubble the larger the species sample that was found.</h5>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
